@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JORC - Jonah Otunla Resource Center. Honoring legacy, empowering generations through knowledge, technology, and community engagement in Oyo State, Nigeria.">
+    <meta name="keywords" content="JORC, Jonah Otunla, Resource Center, Library, IT Training, Education, Nigeria, Oyo State">
+    <meta name="author" content="Jonah Otunla Resource Center">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Jonah Otunla Resource Center (JORC)">
+    <meta property="og:description" content="Honoring Legacy, Empowering Generations To Come. State-of-the-art IT training, library services, and community learning center.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Jonah Otunla Resource Center (JORC) | Honoring Legacy, Empowering Generations</title>
+    <link rel="canonical" href="https://jorc.org.ng">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #F2EEE8;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .bg-jorc-green { background-color: #1B4332; }
+        .text-jorc-green { color: #1B4332; }
+        .border-jorc-green { border-color: #1B4332; }
+        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        @media (min-width: 768px) {
+            .hover-lift:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            }
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #1B4332;
+            transition: width 0.3s ease-in-out;
+        }
+        .nav-link:hover::after { width: 100%; }
+        .nav-link:hover { color: #1B4332; }
+        @keyframes marquee-rtl {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee-rtl {
+            display: flex;
+            width: fit-content;
+            animation: marquee-rtl 30s linear infinite;
+        }
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        #mobile-menu.active {
+            max-height: 400px;
+            padding: 1rem 0;
+        }
+        #lightbox {
+            transition: opacity 0.3s ease-in-out;
+            display: none;
+        }
+        #lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animate-fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        .animate-fade-in-left {
+            opacity: 0;
+            animation: fadeInLeft 0.8s ease forwards;
+        }
+        .animate-fade-in-right {
+            opacity: 0;
+            animation: fadeInRight 0.8s ease forwards;
+        }
+        .animate-scale-in {
+            opacity: 0;
+            animation: scaleIn 0.6s ease forwards;
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-spin-slow { animation: spin-slow 20s linear infinite; }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all 0.8s ease;
+        }
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: all 0.8s ease;
+        }
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
+        .stagger-5 { transition-delay: 0.5s; }
+        .stagger-6 { transition-delay: 0.6s; }
+        .counter {
+            font-variant-numeric: tabular-nums;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #1B4332, #2d6a4f, #1B4332);
+            background-size: 200% 200%;
+            animation: gradient-shift 3s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .glass-dark {
+            background: rgba(27, 67, 50, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        #preloader {
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        #preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #1B4332 0%, #2d6a4f 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(27, 67, 50, 0.3);
+        }
+        .card-shine {
+            position: relative;
+            overflow: hidden;
+        }
+        .card-shine::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        .card-shine:hover::before {
+            left: 100%;
+        }
+        .gallery-filter-btn.active {
+            background-color: #1B4332;
+            color: white;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        .faq-answer.open {
+            max-height: 500px;
+            padding-top: 1rem;
+        }
+        .toast {
+            transform: translateX(120%);
+            transition: transform 0.4s ease;
+        }
+        .toast.show {
+            transform: translateX(0);
+        }
+        #back-to-top {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        #back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        @media (max-width: 768px) {
+            .parallax-bg {
+                background-attachment: scroll;
+            }
+        }
+        .typing-effect::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        .hero-pattern {
+            background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-jorc-green text-white px-4 py-2 rounded z-[200]">
+        Skip to main content
+    </a>
+
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 z-[150] bg-jorc-green flex items-center justify-center">
+        <div class="text-center">
+            <div class="relative w-24 h-24 mx-auto mb-6">
+                <div class="absolute inset-0 border-4 border-white/30 rounded-full"></div>
+                <div class="absolute inset-0 border-4 border-transparent border-t-white rounded-full animate-spin"></div>
+                <div class="absolute inset-2 bg-white/10 rounded-full flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">JORC</span>
+                </div>
+            </div>
+            <p class="text-white/80 text-sm tracking-widest uppercase animate-pulse">Loading Excellence...</p>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 z-50 w-12 h-12 bg-jorc-green text-white rounded-full shadow-lg flex items-center justify-center hover:bg-[#2d5a44] transition-all hover:scale-110" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white shadow-md px-6 md:px-20 lg:px-24 py-3" role="navigation" aria-label="Main navigation">
+        <div class="w-full flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2 md:gap-3" aria-label="JORC Home">
+                <div class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center shrink-0 shadow-sm overflow-hidden border-2 border-jorc-green">
+                    <img src="https://i.postimg.cc/brTF1zfC/Gemini_Generated_Image_nx1nhknx1nhknx1n.png" alt="JORC Logo" class="w-full h-full object-contain p-1" onerror="this.src='https://via.placeholder.com/200x200?text=JORC'">
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <span class="font-bold text-base md:text-lg leading-tight block uppercase tracking-tighter">Jonah Otunla</span>
+                    <span class="text-[10px] md:text-xs uppercase tracking-widest text-jorc-green font-semibold">Resource Centre</span>
+                </div>
+            </a>
+            
+            <div class="hidden md:flex items-center gap-8 font-medium">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#impact" class="nav-link">Impact</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#contact" class="bg-jorc-green text-white px-6 py-2 rounded-full hover:bg-[#2d5a44] hover:scale-105 transition-all duration-300 shadow-sm">Contact</a>
+            </div>
+
+            <button id="menu-toggle" class="md:hidden p-2 text-jorc-green focus:outline-none" aria-label="Toggle Menu" aria-expanded="false">
+                <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden flex flex-col gap-4 text-center font-medium bg-white" role="menu">
+            <a href="#" class="mobile-link py-2 hover:bg-gray-50" role="menuitem">Home</a>
+            <a href="#about" class="mobile-link py-2 hover:bg-gray-50" role="menuitem">About</a>
+            <a href="#services" class="mobile-link py-2 hover:bg-gray-50" role="menuitem">Services</a>
+            <a href="#gallery" class="mobile-link py-2 hover:bg-gray-50" role="menuitem">Gallery</a>
+            <a href="#impact" class="mobile-link py-2 hover:bg-gray-50" role="menuitem">Impact</a>
+            <a href="#faq" class="mobile-link py-2 hover:bg-gray-50" role="menuitem">FAQ</a>
+            <a href="#contact" class="mobile-link py-2 text-jorc-green font-bold" role="menuitem">Contact</a>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <header class="bg-jorc-green text-white py-12 md:py-24 px-6 md:px-20 lg:px-24 overflow-hidden hero-pattern relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-jorc-green via-[#1B4332] to-[#0d2818] opacity-90"></div>
+            <div class="w-full grid md:grid-cols-2 gap-10 md:gap-12 items-center relative z-10">
+                <div class="space-y-6 text-center md:text-left z-10">
+                    <div class="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full text-sm animate-fade-in-up">
+                        <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                        <span>Now Enrolling for 2026 Programs</span>
+                    </div>
+                    <h1 class="text-3xl md:text-6xl lg:text-7xl leading-tight font-bold animate-fade-in-up stagger-1">
+                        Honoring Legacy, <br class="hidden md:block">Empowering <span class="text-yellow-300 font-bold">Generations</span> To Come.
+                    </h1>
+                    <p class="text-base md:text-xl text-gray-300 max-w-lg md:ml-0 mx-auto animate-fade-in-up stagger-2">
+                        Legacy in motion, impacting the future through knowledge, technology, and community engagement.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-fade-in-up stagger-3">
+                        <button onclick="openModal('booking-modal')" class="bg-yellow-400 text-gray-900 px-8 py-4 rounded-md font-bold hover:bg-yellow-300 transition-all duration-300 text-center shadow-lg border-2 border-yellow-300">
+                            Book a Visit
+                        </button>
+                        <a href="#services" class="border-2 border-white text-white px-8 py-4 rounded-md font-bold hover:bg-white hover:text-[#1B4332] transition-all duration-300 text-center flex items-center justify-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            Explore Services
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-6 pt-4 justify-center md:justify-start animate-fade-in-up stagger-4">
+                        <div class="flex -space-x-3">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face" class="w-10 h-10 rounded-full border-2 border-white object-cover" alt="Student">
+                            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=100&h=100&fit=crop&crop=face" class="w-10 h-10 rounded-full border-2 border-white object-cover" alt="Student">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" class="w-10 h-10 rounded-full border-2 border-white object-cover" alt="Student">
+                        </div>
+                        <p class="text-sm text-gray-300"><span class="font-bold text-white">500+</span> Students Impacted</p>
+                    </div>
+                </div>
+                <div class="relative flex justify-center md:justify-end mt-12 md:mt-0 md:pr-12 lg:pr-16 animate-fade-in-right stagger-2">
+                    <div class="relative flex items-center justify-center">
+                        <div class="w-80 h-80 md:w-[400px] md:h-[400px] border-4 border-dashed border-white/30 rounded-full flex items-center justify-center p-4 relative z-10 flex-shrink-0 aspect-square">
+                            <div class="bg-white/10 w-full h-full rounded-full flex items-center justify-center overflow-hidden border-4 border-white/50 shadow-2xl">
+                                <img src="https://i.postimg.cc/VLvFK9qr/Gemini-Generated-Image-un7wtun7wtun7wtu.png" alt="Jonah Otunla" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                            <div class="w-[350px] h-[350px] md:w-[500px] md:h-[500px] border-4 border-dotted border-white/40 rounded-full animate-spin-slow flex-shrink-0 aspect-square"></div>
+                            <div class="absolute w-[400px] h-[400px] md:w-[580px] md:h-[580px] border border-white/10 rounded-full flex-shrink-0 aspect-square"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 text-center text-[10px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.3em] opacity-60 relative z-10">
+                JUNE 12, 1955 — JUNE 16, 2024
+            </div>
+        </header>
+
+        <!-- Welcome Ticker -->
+        <div class="w-full bg-jorc-green border-y border-white/10 py-4 overflow-hidden relative">
+            <div class="animate-marquee-rtl flex items-center whitespace-nowrap">
+                <span class="text-white font-bold uppercase tracking-widest text-sm md:text-base mx-8">
+                    Welcome to Jonah Otunla Resource Center — Honoring Legacy, Empowering the Future — Welcome to Jonah Otunla Resource Center — Honoring Legacy, Empowering the Future —
+                </span>
+                <span class="text-white font-bold uppercase tracking-widest text-sm md:text-base mx-8">
+                    Welcome to Jonah Otunla Resource Center — Honoring Legacy, Empowering the Future — Welcome to Jonah Otunla Resource Center — Honoring Legacy, Empowering the Future —
+                </span>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            
+            <!-- Mission, Vision, Values -->
+            <section id="about" class="bg-white py-16 md:py-24 px-6 md:px-12 rounded-3xl my-8">
+                <div class="text-center mb-12 reveal">
+                    <span class="inline-block bg-jorc-green/10 text-jorc-green px-4 py-1 rounded-full text-sm font-medium mb-4">Who We Are</span>
+                    <h2 class="text-3xl md:text-5xl text-jorc-green font-bold">About JORC</h2>
+                    <div class="w-20 h-1 bg-jorc-green mx-auto mt-4 rounded-full"></div>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8 mb-16">
+                    <div class="reveal stagger-1 bg-white text-gray-800 p-8 rounded-2xl shadow-lg hover-lift border-2 border-jorc-green relative">
+                        <div class="w-16 h-16 bg-jorc-green rounded-2xl flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-jorc-green">Our Mission</h3>
+                        <p class="text-gray-600 leading-relaxed">To empower the next generation by providing world-class tools, resources, and training necessary for academic excellence and technical proficiency.</p>
+                        <div class="mt-6 pt-4 border-t border-gray-200">
+                            <div class="flex items-center gap-2 text-sm text-jorc-green font-medium">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                <span>Empowering through Education</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal stagger-2 bg-white text-gray-800 p-8 rounded-2xl shadow-lg hover-lift border-2 border-jorc-green relative">
+                        <div class="w-16 h-16 bg-jorc-green rounded-2xl flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-jorc-green">Our Vision</h3>
+                        <p class="text-gray-600 leading-relaxed">To be the premier community resource center in West Africa, fostering a vibrant culture of learning, innovation, and leadership.</p>
+                        <div class="mt-6 pt-4 border-t border-gray-200">
+                            <div class="flex items-center gap-2 text-sm text-jorc-green font-medium">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                <span>Leading with Excellence</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal stagger-3 bg-white text-gray-800 p-8 rounded-2xl shadow-lg hover-lift border-2 border-jorc-green relative">
+                        <div class="w-16 h-16 bg-jorc-green rounded-2xl flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-jorc-green">Our Values</h3>
+                        <p class="text-gray-600 leading-relaxed">Excellence, Integrity, Community, Innovation, and Respect guide everything we do. These principles ensure we serve with dedication and honesty.</p>
+                        <div class="mt-6 pt-4 border-t border-gray-200">
+                            <div class="flex items-center gap-2 text-sm text-jorc-green font-medium">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                <span>Guided by Integrity</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6 reveal-left">
+                        <div class="flex items-center gap-4 mb-2">
+                            <div class="w-12 h-1 bg-jorc-green rounded-full"></div>
+                            <h2 class="text-3xl md:text-4xl text-jorc-green font-bold">Our Story</h2>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed text-base md:text-lg">
+                            The Jonah Otunla Resource Center (JORC) is an initiative of the Francisca and Jonah Otunla Foundation. Established in memory of a beloved husband, father, and leader, the center is dedicated to continuing a legacy of service and impact.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed text-base md:text-lg">
+                            We gather to honor a life well-lived and to inspire the future through learning, leadership, and legacy. Our state-of-the-art facilities provide students of all ages with the resources they need to succeed.
+                        </p>
+                        <div class="flex flex-wrap gap-4 pt-4">
+                            <button onclick="openModal('booking-modal')" class="btn-primary text-white px-8 py-3 rounded-md font-semibold shadow-sm inline-flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                Schedule a Visit
+                            </button>
+                            <a href="#contact" class="border-2 border-jorc-green text-jorc-green px-8 py-3 rounded-md font-semibold hover:bg-jorc-green hover:text-white transition-all duration-300 inline-flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                Get in Touch
+                            </a>
+                        </div>
+                    </div>
+                    <div class="reveal-right bg-gray-100 p-6 md:p-8 border-l-4 border-jorc-green shadow-lg rounded-r-xl">
+                        <blockquote class="text-lg md:text-xl italic text-gray-700 mb-6">"Education is the most powerful weapon which you can use to change the world."</blockquote>
+                        <footer class="flex items-center gap-4">
+                            <img src="https://i.postimg.cc/VLvFK9qr/Gemini-Generated-Image-un7wtun7wtun7wtu.png" alt="Jonah Otunla" class="w-16 h-16 rounded-full object-cover border-2 border-jorc-green">
+                            <div>
+                                <cite class="font-bold text-jorc-green not-italic">Jonah Otunla</cite>
+                                <p class="text-sm text-gray-500">Founder, 1955 - 2024</p>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Impact Statistics -->
+            <section id="impact" class="bg-jorc-green py-16 md:py-24 px-6 md:px-12 rounded-3xl my-8 text-white relative overflow-hidden">
+                <div class="absolute inset-0 hero-pattern opacity-20"></div>
+                <div class="relative z-10">
+                    <div class="text-center mb-12 reveal">
+                        <span class="inline-block bg-white/10 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">Our Impact</span>
+                        <h2 class="text-3xl md:text-5xl font-bold">Making a Difference</h2>
+                        <p class="text-white/70 mt-4 max-w-2xl mx-auto">Numbers that reflect our commitment to transforming lives through education and technology.</p>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <div class="text-center reveal stagger-1">
+                            <div class="text-4xl md:text-6xl font-bold counter" data-target="500">0</div>
+                            <p class="text-white/70 mt-2 font-medium">Students Trained</p>
+                        </div>
+                        <div class="text-center reveal stagger-2">
+                            <div class="text-4xl md:text-6xl font-bold counter" data-target="50">0</div>
+                            <p class="text-white/70 mt-2 font-medium">Computer Units</p>
+                        </div>
+                        <div class="text-center reveal stagger-3">
+                            <div class="text-4xl md:text-6xl font-bold counter" data-target="1000">0</div>
+                            <p class="text-white/70 mt-2 font-medium">Books Available</p>
+                        </div>
+                        <div class="text-center reveal stagger-4">
+                            <div class="text-4xl md:text-6xl font-bold counter" data-target="20">0</div>
+                            <p class="text-white/70 mt-2 font-medium">Workshops Hosted</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Core Services Section -->
+            <section id="services" class="bg-white py-16 md:py-24 px-6 md:px-12 rounded-3xl my-8">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-12 reveal">
+                        <span class="inline-block bg-jorc-green/10 text-jorc-green px-4 py-1 rounded-full text-sm font-medium mb-4">What We Offer</span>
+                        <h2 class="text-3xl md:text-5xl text-jorc-green font-bold mb-4">Core Services</h2>
+                        <p class="text-gray-500 max-w-2xl mx-auto">Comprehensive educational resources and training programs designed to empower the next generation.</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="reveal stagger-1 card-shine bg-gray-50 p-2 rounded-2xl shadow-sm hover-lift border border-gray-100 flex flex-col group">
+                            <div class="aspect-video bg-gray-200 rounded-xl mb-4 md:mb-6 overflow-hidden border-2 border-jorc-green relative">
+                                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=600" alt="IT Training" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                                <div class="absolute top-4 left-4 bg-jorc-green text-white text-xs font-bold px-3 py-1 rounded-full">Popular</div>
+                            </div>
+                            <div class="px-4 pb-6 flex-grow">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1B4332" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                                    <h3 class="text-lg md:text-xl font-bold text-jorc-green">Specialized IT Training</h3>
+                                </div>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-4">State-of-the-art computer lab providing digital literacy and advanced IT skills training.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-jorc-green/10 text-jorc-green text-xs px-2 py-1 rounded-full">MS Office</span>
+                                    <span class="bg-jorc-green/10 text-jorc-green text-xs px-2 py-1 rounded-full">Web Design</span>
+                                    <span class="bg-jorc-green/10 text-jorc-green text-xs px-2 py-1 rounded-full">Programming</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reveal stagger-2 card-shine bg-gray-50 p-2 rounded-2xl shadow-sm hover-lift border border-gray-100 flex flex-col group">
+                            <div class="aspect-video bg-gray-200 rounded-xl mb-4 md:mb-6 overflow-hidden border-2 border-jorc-green relative">
+                                <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&q=80&w=600" alt="Library" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                            </div>
+                            <div class="px-4 pb-6 flex-grow">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1B4332" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                                    <h3 class="text-lg md:text-xl font-bold text-jorc-green">Library Service</h3>
+                                </div>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-4">Comprehensive collection of academic resources, quiet study spaces, and research assistance.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-jorc-green/10 text-jorc-green text-xs px-2 py-1 rounded-full">WAEC/JAMB</span>
+                                    <span class="bg-jorc-green/10 text-jorc-green text-xs px-2 py-1 rounded-full">Leadership</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reveal stagger-3 card-shine bg-gray-50 p-2 rounded-2xl shadow-sm hover-lift border border-gray-100 flex flex-col group md:col-span-2 lg:col-span-1">
+                            <div class="aspect-video bg-gray-200 rounded-xl mb-4 md:mb-6 overflow-hidden border-2 border-jorc-green relative">
+                                <img src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&q=80&w=600" alt="Seminar Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                            </div>
+                            <div class="px-4 pb-6 flex-grow">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1B4332" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                                    <h3 class="text-lg md:text-xl font-bold text-jorc-green">Multimedia Seminar Room</h3>
+                                </div>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-4">Versatile space for seminars, workshops, presentations, and community events.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-jorc-green/10 text-jorc-green text-xs px-2 py-1 rounded-full">50 Seats</span>
+                                    <span class="bg-jorc-green/10 text-jorc-green text-xs px-2 py-1 rounded-full">Projector</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gallery Section -->
+            <section id="gallery" class="bg-white py-16 md:py-24 px-6 md:px-12 rounded-3xl my-8">
+                <div class="text-center mb-8 reveal">
+                    <span class="inline-block bg-jorc-green/10 text-jorc-green px-4 py-1 rounded-full text-sm font-medium mb-4">Our Space</span>
+                    <h2 class="text-3xl md:text-5xl text-jorc-green font-bold mb-4">Our Center Gallery</h2>
+                    <p class="text-gray-500 max-w-xl mx-auto">A glimpse into our state-of-the-art facilities and vibrant learning environment.</p>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-3 mb-8 reveal">
+                    <button class="gallery-filter-btn active px-4 py-2 rounded-full text-sm font-medium border border-jorc-green transition-all hover:bg-jorc-green hover:text-white" data-filter="all">All</button>
+                    <button class="gallery-filter-btn px-4 py-2 rounded-full text-sm font-medium border border-gray-300 text-gray-600 transition-all hover:border-jorc-green hover:text-jorc-green" data-filter="exterior">Exterior</button>
+                    <button class="gallery-filter-btn px-4 py-2 rounded-full text-sm font-medium border border-gray-300 text-gray-600 transition-all hover:border-jorc-green hover:text-jorc-green" data-filter="interior">Interior</button>
+                    <button class="gallery-filter-btn px-4 py-2 rounded-full text-sm font-medium border border-gray-300 text-gray-600 transition-all hover:border-jorc-green hover:text-jorc-green" data-filter="events">Events</button>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                    <div class="aspect-square rounded-2xl overflow-hidden shadow-md group relative cursor-pointer gallery-item border-2 border-jorc-green reveal gallery-exterior" data-category="exterior">
+                        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&q=80&w=800" alt="Center Exterior" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-jorc-green/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-white font-semibold text-sm">Center Exterior</span>
+                        </div>
+                    </div>
+                    <div class="aspect-square rounded-2xl overflow-hidden shadow-md group relative cursor-pointer gallery-item border-2 border-jorc-green reveal stagger-1 gallery-interior" data-category="interior">
+                        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&q=80&w=800" alt="Library View" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-jorc-green/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-white font-semibold text-sm">Library Interior</span>
+                        </div>
+                    </div>
+                    <div class="aspect-square rounded-2xl overflow-hidden shadow-md group relative cursor-pointer gallery-item border-2 border-jorc-green reveal stagger-2 gallery-interior" data-category="interior">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800" alt="ICT Center" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-jorc-green/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-white font-semibold text-sm">ICT Lab</span>
+                        </div>
+                    </div>
+                    <div class="aspect-square rounded-2xl overflow-hidden shadow-md group relative cursor-pointer gallery-item border-2 border-jorc-green reveal stagger-3 gallery-exterior" data-category="exterior">
+                        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&q=80&w=800" alt="Campus View" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-jorc-green/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-white font-semibold text-sm">Campus Grounds</span>
+                        </div>
+                    </div>
+                    <div class="aspect-square rounded-2xl overflow-hidden shadow-md group relative cursor-pointer gallery-item border-2 border-jorc-green reveal stagger-4 gallery-interior" data-category="interior">
+                        <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=800" alt="Seminar Hall" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-jorc-green/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-white font-semibold text-sm">Seminar Hall</span>
+                        </div>
+                    </div>
+                    <div class="aspect-square rounded-2xl overflow-hidden shadow-md group relative cursor-pointer gallery-item border-2 border-jorc-green reveal gallery-events" data-category="events">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800" alt="Workshop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-jorc-green/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-white font-semibold text-sm">Workshop</span>
+                        </div>
+                    </div>
+                    <div class="aspect-square rounded-2xl overflow-hidden shadow-md group relative cursor-pointer gallery-item border-2 border-jorc-green reveal stagger-1 gallery-events" data-category="events">
+                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800" alt="Training Session" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-jorc-green/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-white font-semibold text-sm">Training Session</span>
+                        </div>
+                    </div>
+                    <div class="aspect-square rounded-2xl overflow-hidden shadow-md group relative cursor-pointer gallery-item border-2 border-jorc-green reveal stagger-2 gallery-interior" data-category="interior">
+                        <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=800" alt="Study Area" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-jorc-green/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-white font-semibold text-sm">Study Area</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="bg-gray-50 py-16 md:py-24 px-6 md:px-12 rounded-3xl my-8 reveal">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-12">
+                        <span class="inline-block bg-jorc-green/10 text-jorc-green px-4 py-1 rounded-full text-sm font-medium mb-4">Testimonials</span>
+                        <h2 class="text-3xl md:text-5xl text-jorc-green font-bold mb-4">What People Say</h2>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="bg-white p-8 rounded-2xl shadow-sm hover-lift border border-gray-100">
+                            <div class="flex items-center gap-1 text-yellow-400 mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <p class="text-gray-600 italic mb-6">"JORC transformed my daughter's understanding of technology. The instructors are patient and the facilities are world-class."</p>
+                            <div class="flex items-center gap-4">
+                                <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=100&h=100&fit=crop&crop=face" alt="Parent" class="w-12 h-12 rounded-full object-cover">
+                                <div>
+                                    <p class="font-bold text-jorc-green">Mrs. Adebayo</p>
+                                    <p class="text-sm text-gray-500">Parent</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-8 rounded-2xl shadow-sm hover-lift border border-gray-100">
+                            <div class="flex items-center gap-1 text-yellow-400 mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <p class="text-gray-600 italic mb-6">"The library resources helped me prepare for JAMB. I got into university on my first attempt thanks to JORC."</p>
+                            <div class="flex items-center gap-4">
+                                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face" alt="Student" class="w-12 h-12 rounded-full object-cover">
+                                <div>
+                                    <p class="font-bold text-jorc-green">Emmanuel O.</p>
+                                    <p class="text-sm text-gray-500">Student, 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-8 rounded-2xl shadow-sm hover-lift border border-gray-100">
+                            <div class="flex items-center gap-1 text-yellow-400 mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <p class="text-gray-600 italic mb-6">"We hosted our community meeting at JORC. The facilities exceeded our expectations. Highly recommended."</p>
+                            <div class="flex items-center gap-4">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Community Leader" class="w-12 h-12 rounded-full object-cover">
+                                <div>
+                                    <p class="font-bold text-jorc-green">Chief Olatunji</p>
+                                    <p class="text-sm text-gray-500">Community Leader</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section id="faq" class="bg-white py-16 md:py-24 px-6 md:px-12 rounded-3xl my-8">
+                <div class="max-w-3xl mx-auto">
+                    <div class="text-center mb-12 reveal">
+                        <span class="inline-block bg-jorc-green/10 text-jorc-green px-4 py-1 rounded-full text-sm font-medium mb-4">Got Questions?</span>
+                        <h2 class="text-3xl md:text-5xl text-jorc-green font-bold mb-4">Frequently Asked Questions</h2>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="faq-item bg-gray-50 rounded-xl overflow-hidden border border-gray-100 reveal">
+                            <button class="faq-toggle w-full text-left p-6 flex justify-between items-center font-semibold text-jorc-green hover:bg-gray-100 transition-colors">
+                                <span>What are the operating hours?</span>
+                                <svg class="faq-icon w-5 h-5 transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="faq-answer px-6 pb-6 text-gray-600">
+                                JORC is open Monday to Friday, from 8am to 5pm. We are closed on weekends and public holidays.
+                            </div>
+                        </div>
+                        <div class="faq-item bg-gray-50 rounded-xl overflow-hidden border border-gray-100 reveal stagger-1">
+                            <button class="faq-toggle w-full text-left p-6 flex justify-between items-center font-semibold text-jorc-green hover:bg-gray-100 transition-colors">
+                                <span>Is there a fee for using the facilities?</span>
+                                <svg class="faq-icon w-5 h-5 transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="faq-answer px-6 pb-6 text-gray-600">
+                                All our services are completely free! Library access, IT training, and use of our facilities are available at no cost to the community.
+                            </div>
+                        </div>
+                        <div class="faq-item bg-gray-50 rounded-xl overflow-hidden border border-gray-100 reveal stagger-2">
+                            <button class="faq-toggle w-full text-left p-6 flex justify-between items-center font-semibold text-jorc-green hover:bg-gray-100 transition-colors">
+                                <span>How do I register for IT training?</span>
+                                <svg class="faq-icon w-5 h-5 transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="faq-answer px-6 pb-6 text-gray-600">
+                                You can register in person at our reception, or call us at +234 916 107 9000. Online registration coming soon!
+                            </div>
+                        </div>
+                        <div class="faq-item bg-gray-50 rounded-xl overflow-hidden border border-gray-100 reveal stagger-3">
+                            <button class="faq-toggle w-full text-left p-6 flex justify-between items-center font-semibold text-jorc-green hover:bg-gray-100 transition-colors">
+                                <span>Can the seminar room be rented for events?</span>
+                                <svg class="faq-icon w-5 h-5 transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="faq-answer px-6 pb-6 text-gray-600">
+                                Yes! The multimedia seminar room is available for community events, workshops, and presentations. Contact us for booking.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Newsletter Section -->
+            <section class="bg-jorc-green py-16 md:py-24 px-6 md:px-12 rounded-3xl my-8 text-white relative overflow-hidden reveal">
+                <div class="absolute inset-0 hero-pattern opacity-10"></div>
+                <div class="relative z-10 max-w-2xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Stay Connected</h2>
+                    <p class="text-white/70 mb-8">Subscribe to our newsletter for updates on programs, events, and opportunities.</p>
+                    <form id="newsletter-form" class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                        <input type="email" id="newsletter-email" placeholder="Enter your email" required class="flex-1 px-6 py-4 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-white/50">
+                        <button type="submit" class="bg-white text-jorc-green px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors whitespace-nowrap">Subscribe</button>
+                    </form>
+                    <p class="text-white/50 text-xs mt-4">We respect your privacy. Unsubscribe anytime.</p>
+                </div>
+            </section>
+
+            <!-- News & Updates Section -->
+            <section id="updates" class="bg-white py-16 md:py-24 px-6 md:px-12 rounded-3xl my-8">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-10 reveal">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl text-jorc-green font-bold">News & Updates</h2>
+                        <p class="text-gray-500 mt-2">Latest happenings at JORC</p>
+                    </div>
+                    <a href="#" class="text-jorc-green font-semibold hover:underline mt-4 md:mt-0 inline-flex items-center gap-2">
+                        View All News
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="reveal flex flex-col md:flex-row gap-6 md:gap-8 items-stretch bg-gray-50 rounded-2xl shadow-sm overflow-hidden border border-gray-100 hover-lift group">
+                        <div class="md:w-2/5 h-48 md:h-auto overflow-hidden shrink-0">
+                            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=600" alt="ICT Class" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        </div>
+                        <div class="md:w-3/5 p-6 md:p-8 flex flex-col justify-center">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">New</span>
+                                <span class="bg-jorc-green/10 text-jorc-green text-xs font-bold px-3 py-1 rounded-full">Enrollment Open</span>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold mb-2 text-jorc-green">Enrollment Open: Basic Digital Literacy</h3>
+                            <p class="text-gray-400 text-xs md:text-sm mb-4">April 2026 Batch</p>
+                            <p class="text-gray-600 mb-4 text-sm md:text-base">4-week ICT intensive training. Learn essential computer skills and internet safety.</p>
+                            <button onclick="openModal('booking-modal')" class="text-jorc-green font-bold border-b-2 border-jorc-green hover:pb-1 hover:translate-x-1 transition-all duration-300 w-fit">Register Now</button>
+                        </div>
+                    </div>
+
+                    <div class="reveal stagger-1 flex flex-col md:flex-row gap-6 md:gap-8 items-stretch bg-gray-50 rounded-2xl shadow-sm overflow-hidden border border-gray-100 hover-lift group">
+                        <div class="md:w-2/5 h-48 md:h-auto overflow-hidden shrink-0">
+                            <img src="https://images.unsplash.com/photo-1491841573634-28140fc7ced7?auto=format&fit=crop&q=80&w=600" alt="New Books" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        </div>
+                        <div class="md:w-3/5 p-6 md:p-8 flex flex-col justify-center">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">New</span>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold mb-2 text-jorc-green">200+ New Books Added</h3>
+                            <p class="text-gray-400 text-xs md:text-sm mb-4">March 2026</p>
+                            <p class="text-gray-600 mb-4 text-sm md:text-base">WAEC/JAMB preparatory texts and leadership books now available.</p>
+                            <a href="#" class="text-jorc-green font-bold border-b-2 border-jorc-green hover:pb-1 hover:translate-x-1 transition-all duration-300 w-fit">View Catalog</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer & Contact Section -->
+        <footer id="contact" class="bg-white pt-16 md:pt-20 pb-10 px-6 md:px-12 rounded-3xl my-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                    <div class="space-y-6 text-center md:text-left">
+                        <div class="flex items-center gap-3 justify-center md:justify-start">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shrink-0 shadow-sm overflow-hidden border-2 border-jorc-green">
+                                <img src="https://i.postimg.cc/brTF1zfC/Gemini_Generated_Image_nx1nhknx1nhknx1n.png" alt="JORC Logo" class="w-full h-full object-contain p-1">
+                            </div>
+                            <div>
+                                <span class="font-bold text-lg block uppercase">JORC</span>
+                                <span class="text-xs text-gray-500 uppercase tracking-wider">Resource Center</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm">Honoring the legacy of Jonah Otunla by empowering the next generation through education and technology.</p>
+                        <div class="flex justify-center md:justify-start gap-4">
+                            <a href="#" class="w-10 h-10 bg-jorc-green text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform" aria-label="Facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-jorc-green text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform" aria-label="Instagram">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-jorc-green text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform" aria-label="Twitter">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-jorc-green text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform" aria-label="YouTube">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 text-center md:text-left">
+                        <h3 class="text-xl text-jorc-green font-bold">Quick Links</h3>
+                        <ul class="space-y-3">
+                            <li><a href="#about" class="text-gray-600 hover:text-jorc-green transition-colors text-sm">About Us</a></li>
+                            <li><a href="#services" class="text-gray-600 hover:text-jorc-green transition-colors text-sm">Our Services</a></li>
+                            <li><a href="#gallery" class="text-gray-600 hover:text-jorc-green transition-colors text-sm">Gallery</a></li>
+                            <li><a href="#faq" class="text-gray-600 hover:text-jorc-green transition-colors text-sm">FAQs</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-jorc-green transition-colors text-sm">Blog</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="space-y-6 text-center md:text-left">
+                        <h3 class="text-xl text-jorc-green font-bold">Services</h3>
+                        <ul class="space-y-3">
+                            <li><a href="#services" class="text-gray-600 hover:text-jorc-green transition-colors text-sm">IT Training</a></li>
+                            <li><a href="#services" class="text-gray-600 hover:text-jorc-green transition-colors text-sm">Library Access</a></li>
+                            <li><a href="#services" class="text-gray-600 hover:text-jorc-green transition-colors text-sm">Seminar Room</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-jorc-green transition-colors text-sm">Research Support</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-jorc-green transition-colors text-sm">Printing Services</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="space-y-6 text-center md:text-left">
+                        <h3 class="text-xl text-jorc-green font-bold">Contact Info</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3 justify-center md:justify-start">
+                                <svg class="text-jorc-green shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                <p class="text-gray-600 text-sm">JORC Building, Saki Road, Irawo-Owode, Atisbo LGA, Oyo State, Nigeria</p>
+                            </div>
+                            <div class="flex items-center gap-3 justify-center md:justify-start">
+                                <svg class="text-jorc-green shrink-0" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                <a href="tel:+2349161079000" class="text-gray-600 hover:text-jorc-green text-sm">+234 916 107 9000</a>
+                            </div>
+                            <div class="flex items-center gap-3 justify-center md:justify-start">
+                                <svg class="text-jorc-green shrink-0" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                <a href="mailto:info@jorc.org.ng" class="text-gray-600 hover:text-jorc-green text-sm">info@jorc.org.ng</a>
+                            </div>
+                            <div class="flex items-center gap-3 justify-center md:justify-start">
+                                <svg class="text-jorc-green shrink-0" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                <p class="text-gray-600 text-sm">Mon-Fri: 8am - 5pm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full h-64 md:h-80 rounded-2xl overflow-hidden shadow-inner border-2 border-jorc-green relative">
+                    <iframe src="https://maps.google.com/maps?q=8.5406012,3.3601761&z=17&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <a href="https://www.google.com/maps/place/Jonah+Otunla+Resource+Centre/@8.5406012,3.3601761,17z" target="_blank" class="absolute top-4 right-4 z-10 bg-jorc-green text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg hover:bg-[#2d5a44] transition-all flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                        Open in Maps
+                    </a>
+                </div>
+
+                <div class="flex flex-col md:flex-row justify-between items-center border-t border-gray-100 pt-8 gap-4 text-xs md:text-sm text-gray-500 text-center mt-12">
+                    <p>&copy; 2024 Jonah Otunla Resource Center. All rights reserved.</p>
+                    <div class="flex gap-6">
+                        <a href="#" class="hover:text-jorc-green transition-colors">Privacy Policy</a>
+                        <a href="#" class="hover:text-jorc-green transition-colors">Terms of Service</a>
+                        <a href="#" class="hover:text-jorc-green transition-colors">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 hidden items-center justify-center p-4 md:p-10">
+        <button id="close-lightbox" class="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors z-[110]" aria-label="Close Gallery">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <img id="lightbox-img" src="" alt="Expanded View" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl border-4 border-jorc-green">
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="fixed inset-0 z-[100] bg-black/60 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl animate-scale-in">
+            <div class="p-6 border-b border-gray-100 flex justify-between items-center">
+                <h3 class="text-2xl font-bold text-jorc-green">Schedule a Visit</h3>
+                <button onclick="closeModal('booking-modal')" class="text-gray-400 hover:text-gray-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+            <form id="booking-form" class="p-6 space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                    <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-jorc-green focus:border-transparent outline-none transition-all" placeholder="Enter your full name">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                    <input type="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-jorc-green focus:border-transparent outline-none transition-all" placeholder="your@email.com">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                    <input type="tel" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-jorc-green focus:border-transparent outline-none transition-all" placeholder="+234 xxx xxx xxxx">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Preferred Date</label>
+                    <input type="date" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-jorc-green focus:border-transparent outline-none transition-all">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Purpose of Visit</label>
+                    <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-jorc-green focus:border-transparent outline-none transition-all">
+                        <option>Library Visit</option>
+                        <option>IT Training Inquiry</option>
+                        <option>Facility Tour</option>
+                        <option>Seminar Room Booking</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full btn-primary text-white py-4 rounded-lg font-bold hover:opacity-90 transition-all">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-8 left-4 md:left-8 z-[200] bg-jorc-green text-white px-6 py-4 rounded-lg shadow-xl flex items-center gap-3 max-w-sm" style="transform: translateX(120%); display: none;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <span id="toast-message"></span>
+    </div>
+
+    <script>
+        // Preloader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('preloader').classList.add('hidden');
+            }, 800);
+        });
+
+        // Mobile Navigation
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            const isExpanded = mobileMenu.classList.contains('active');
+            menuToggle.setAttribute('aria-expanded', isExpanded);
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+        const revealOnScroll = () => {
+            revealElements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                if (rect.top < windowHeight - 100) {
+                    el.classList.add('active');
+                }
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        let countersStarted = false;
+        const startCounters = () => {
+            if (countersStarted) return;
+            const section = document.getElementById('impact');
+            if (!section) return;
+            const rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                countersStarted = true;
+                counters.forEach(counter => {
+                    const target = parseInt(counter.dataset.target);
+                    const duration = 2000;
+                    const step = target / (duration / 16);
+                    let current = 0;
+                    const updateCounter = () => {
+                        current += step;
+                        if (current < target) {
+                            counter.textContent = Math.floor(current) + '+';
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.textContent = target + '+';
+                        }
+                    };
+                    updateCounter();
+                });
+            }
+        };
+        window.addEventListener('scroll', startCounters);
+        window.addEventListener('load', startCounters);
+
+        // Gallery Lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const closeLightbox = document.getElementById('close-lightbox');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const imgUrl = item.querySelector('img').src;
+                lightboxImg.src = imgUrl;
+                lightbox.classList.add('active');
+                lightbox.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        const hideLightbox = () => {
+            lightbox.classList.remove('active');
+            setTimeout(() => lightbox.classList.add('hidden'), 300);
+            document.body.style.overflow = 'auto';
+        };
+
+        closeLightbox.addEventListener('click', hideLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) hideLightbox();
+        });
+
+        // Gallery Filter
+        const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-jorc-green', 'text-white', 'border-jorc-green');
+                    b.classList.add('border-gray-300', 'text-gray-600');
+                });
+                btn.classList.add('active', 'bg-jorc-green', 'text-white', 'border-jorc-green');
+                btn.classList.remove('border-gray-300', 'text-gray-600');
+                
+                const filter = btn.dataset.filter;
+                document.querySelectorAll('.gallery-item').forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // FAQ Accordion
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const answer = toggle.nextElementSibling;
+                const icon = toggle.querySelector('.faq-icon');
+                const isOpen = answer.classList.contains('open');
+                
+                document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+                document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = 'rotate(0deg)');
+                
+                if (!isOpen) {
+                    answer.classList.add('open');
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Modal Functions
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on backdrop click
+        document.querySelectorAll('[id$="-modal"]').forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal(modal.id);
+            });
+        });
+
+        // Toast Notification
+        function showToast(message) {
+            var toast = document.getElementById('toast');
+            var toastMessage = document.getElementById('toast-message');
+            toastMessage.textContent = message;
+            toast.style.display = 'flex';
+            toast.style.transform = 'translateX(0)';
+            setTimeout(function() {
+                toast.style.transform = 'translateX(120%)';
+                setTimeout(function() {
+                    toast.style.display = 'none';
+                }, 400);
+            }, 3000);
+        }
+
+        // Form Submissions
+        document.getElementById('booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            closeModal('booking-modal');
+            showToast('Thank you! Your visit request has been submitted. We will contact you soon.');
+            e.target.reset();
+        });
+
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            showToast('Thank you for subscribing! Check your email for confirmation.');
+            e.target.reset();
+        });
+
+        // Back to Top
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                hideLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
